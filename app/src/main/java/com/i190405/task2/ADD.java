@@ -2,6 +2,7 @@ package com.i190405.task2;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,16 +16,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ADD extends AppCompatActivity {
     //ImageView dp;
+    ArrayList<MyModel> arrayList;
     CircleImageView dp;
     EditText name,number,address;
+    String nam1,num1,addrs1;
     Button add;
     Bitmap bitmap;
     byte[] bytearr;
+    SharedPreferences mPref;
+    SharedPreferences.Editor editmPref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +41,8 @@ public class ADD extends AppCompatActivity {
         address=findViewById(R.id.address);
         name=findViewById(R.id.name);
         add=findViewById(R.id.add);
-
+        mPref = getSharedPreferences("com.i190405.task2", MODE_PRIVATE);
+        editmPref = mPref.edit();//This allows us to edit the values as well
 
         dp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +63,14 @@ public class ADD extends AppCompatActivity {
                 String nam=name.getText().toString();
                 String addrs=address.getText().toString();
                 String num=number.getText().toString();
+                nam1=nam;addrs1=addrs;num1=num;
                 Intent intent=new Intent(ADD.this,MainActivity.class);
                 intent.putExtra("nam",nam);
                 intent.putExtra("addrs",addrs);
                 intent.putExtra("num",num);
                 intent.putExtra("img",bytearr);
                 setResult(Activity.RESULT_OK,intent);
-                finish();
+                startActivity(intent);
 
             }
         });
@@ -89,5 +97,14 @@ public class ADD extends AppCompatActivity {
             //Convert bitmap into biytearray, compress it and append it to the first image
             //and by clicking a list a new page with all info should be opened
         }
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        editmPref.putString("name", nam1);//saves the value
+        editmPref.putString("number", num1);//saves the value
+        editmPref.putString("address", addrs1);//saves the value
+        editmPref.apply();
+        editmPref.commit(); //same value appear no matter how many times you restart the app
     }
 }

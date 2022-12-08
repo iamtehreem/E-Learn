@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "542036029579",
+    "project_id": "elearn-smd",
+    "storage_bucket": "elearn-smd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542036029579:android:57c8e6276dceb865dce48e",
+        "android_client_info": {
+          "package_name": "com.i190405.task2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542036029579-r6d0vf337nqr2oc87bvn4v76qu1sopb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUhGviNCbLefVSk4uRTAg1Xasc7hXKtQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542036029579-r6d0vf337nqr2oc87bvn4v76qu1sopb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542036029579:android:561c157c796455fbdce48e",
+        "android_client_info": {
+          "package_name": "com.tehreemfatima.elearn_smd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542036029579-r6d0vf337nqr2oc87bvn4v76qu1sopb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUhGviNCbLefVSk4uRTAg1Xasc7hXKtQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542036029579-r6d0vf337nqr2oc87bvn4v76qu1sopb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

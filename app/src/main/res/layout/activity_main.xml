@@ -27,4 +27,123 @@
 
     </ImageView>
 
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drar"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@drawable/drawer_screen"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="0.2"
+                android:gravity="center">
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.05"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Username"
+                    android:textColor="#FFC20F"
+                    android:textSize="25dp">
+
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.05"
+
+                >
+
+
+                <Button
+                    android:id="@+id/profilee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#523C1A"
+                    android:text="Edit Profile"
+                    android:textAllCaps="false"
+                    android:textColor="#FFC20F"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.05">
+
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#523C1A"
+                    android:text="Change Password"
+                    android:textAllCaps="false"
+                    android:textColor="#FFC20F"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.4"
+                android:gravity="bottom"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center">
+
+
+                    <Button
+                        android:id="@+id/button15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#523C1A"
+                        android:text="Logout"
+                        android:textColor="#FFC20F"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
 </RelativeLayout>

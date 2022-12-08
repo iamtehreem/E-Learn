@@ -15,17 +15,25 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     List<MyModel> ls;
     Context c;
-
+    private ArrayList<MyModel> courseModelArrayList;
     public MyAdapter(List<MyModel> ls, Context c) {
         this.ls = ls;
         this.c = c;
     }
-
+    public void filterList(ArrayList<MyModel> filterlist) {
+        // below line is to add our filtered
+        // list in our course array list.
+        ls = filterlist;
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {   //this generates a row hence

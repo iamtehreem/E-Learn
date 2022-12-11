@@ -12,7 +12,7 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="25dp"
         android:layout_weight="0.075"
         android:gravity="right">
@@ -20,13 +20,13 @@
 
         <Button
             android:id="@+id/signin"
-            android:layout_width="200dp"
-            android:backgroundTint="@color/white"
-            android:layout_height="50dp"
-            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_700"
+            android:textAllCaps="false"
             android:text="Sign In"
-            android:gravity="right"
-            android:textSize="23dp" />
+            android:textColor="#FFC20F"
+            android:textSize="15dp" />
 
     </LinearLayout>
 
@@ -185,18 +185,15 @@
 
         <Button
             android:id="@+id/signup"
-            android:layout_width="149dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:gravity="right"
-            android:text="Sign Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_700"
             android:textAllCaps="false"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:textSize="23dp" />
+            android:text="Signup"
+            android:textColor="#FFC20F"
+            android:textSize="15dp" />
 
     </LinearLayout>
-
 
 
 

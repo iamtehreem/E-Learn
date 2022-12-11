@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     List<MyModel> ls;
     MyAdapter adapter;
     ImageView add;
-    Button profilee;
+    Button profilebtn,enrollcourse;
     String name,number,address;
     SharedPreferences mPref;
     SharedPreferences.Editor editmPref;
@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         rv=findViewById(R.id.rv);
         add=findViewById(R.id.add);
-        profilee=findViewById(R.id.profilee);
+        profilebtn=findViewById(R.id.profilebtn);
+
+        enrollcourse=findViewById(R.id.enrollcourse);
         name="How To learn?";
         number="Dr. Tehreem";
         address="Have you mastered effective communication strategies? Delivering a presentation can cause even the most confident among us to break a sweat. Whether you are delivering a formal presentation, making a pitch, or leading a group discussion, communicating your message with poise, confidence, and conviction is essential in connecting with your audience and inspiring them by building trust and credibility.\n" +
@@ -69,12 +71,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        profilee.setOnClickListener(new View.OnClickListener() {
+
+
+        enrollcourse.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, create_profile.class));
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, enroll_course.class));
             }
         });
+
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, profile.class));
+            }
+        });
+
+
 
 
     }

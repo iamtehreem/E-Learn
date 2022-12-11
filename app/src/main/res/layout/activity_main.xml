@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
@@ -30,9 +31,7 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drar"
         android:layout_width="300dp"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="match_parent">
 
 
         <LinearLayout
@@ -83,7 +82,7 @@
 
 
                 <Button
-                    android:id="@+id/profilee"
+                    android:id="@+id/profilebtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#523C1A"
@@ -101,11 +100,11 @@
 
 
                 <Button
-                    android:id="@+id/button14"
+                    android:id="@+id/enrollcourse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#523C1A"
-                    android:text="Change Password"
+                    android:text="Enroll in Course"
                     android:textAllCaps="false"
                     android:textColor="#FFC20F"
                     android:textSize="20dp" />
